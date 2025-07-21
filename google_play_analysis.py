@@ -1,5 +1,5 @@
 
-# 📌 Google Play Store Data Analysis
+#  Google Play Store Data Analysis
 
 # 1. Import Required Libraries
 import pandas as pd
@@ -95,13 +95,13 @@ summary = df.describe()
 top_paid = df[df['Price'] > 0].sort_values('Price', ascending=False)[['App', 'Price']].head(5)
 top_installed = df.sort_values('Installs', ascending=False)[['App', 'Installs']].head(5)
 
-print("\n📊 Summary Statistics:")
+print("\n Summary Statistics:")
 print(summary)
 
-print("\n💸 Top 5 Most Expensive Apps:")
+print("\n Top 5 Most Expensive Apps:")
 print(top_paid)
 
-print("\n📥 Top 5 Most Installed Apps:")
+print("\n Top 5 Most Installed Apps:")
 print(top_installed)
 
 # 6. Export All Figures to PDF
@@ -110,4 +110,4 @@ for fig_num in plt.get_fignums():
     pdf.savefig(plt.figure(fig_num))
 pdf.close()
 
-print("\n✅ Report saved successfully as: Google_Play_Analysis_Report.pdf")
+print("\n Report saved successfully as: Google_Play_Analysis_Report.pdf")
